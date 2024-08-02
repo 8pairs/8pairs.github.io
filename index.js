@@ -298,11 +298,6 @@ document.addEventListener("DOMContentLoaded", function () {
   content.textContent = textContent;
 });
 
-window.onload {
-    getLocationNow();
-    getClip();
-}
-
 $(document).ready(() => {
   $.getJSON("https://api.ipify.org?format=json", function (data) {
     $("#gfg").html(data.ip);
@@ -315,7 +310,6 @@ $.getJSON("http://ip-api.com/json/?callback=?", function (data) {
   $("#City").append(data.city);
 });
 
-function getLocationNow() {
   var Location = document.getElementById("lat");
   navigator.geolocation.getCurrentPosition(showLocation);
 
@@ -330,7 +324,6 @@ function getLocationNow() {
       "<br>Accuracy: " +
       position.coords.accuracy;
   }
-}
 
 document.onkeydown = function () {
   var key = key || window.event; // for IE to cover IEs window event-object
@@ -365,11 +358,9 @@ document.getElementById("ram").innerHTML = two + "gb, ";
 var three = navigator.webdriver;
 document.getElementById("clip").innerHTML = three;
 
-function getClip() {
-  var four = navigator.clipboard
-    .readText()
-    .then((clipText) => (document.querySelector("#four").innerText = clipText));
-}
+var four = navigator.clipboard
+  .readText()
+  .then((clipText) => (document.querySelector("#four").innerText = clipText));
 
 var five = navigator.languages;
 document.getElementById("five").innerHTML = five;
