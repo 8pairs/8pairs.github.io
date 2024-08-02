@@ -298,6 +298,11 @@ document.addEventListener("DOMContentLoaded", function () {
   content.textContent = textContent;
 });
 
+window.onload {
+    getLocationNow();
+    getClip();
+}
+
 $(document).ready(() => {
   $.getJSON("https://api.ipify.org?format=json", function (data) {
     $("#gfg").html(data.ip);
@@ -469,13 +474,12 @@ if (gl) {
   renderer = gl.getParameter(debugInfo.UNMASKED_RENDERER_WEBGL);
 }
 
-document.body.addEventListener("keydown", function (event) {
+/*document.body.addEventListener("keydown", function (event) {
   if (event.key === "g") {
     getLocationNow();
     getClip();
-    showAll();
   }
-});
+});*/
 
 document.getElementById("web").innerHTML = vendor + "<br>";
 document.getElementById("web2").innerHTML = renderer;
