@@ -1,0 +1,109 @@
+table {
+    width: 49%;
+    border: 1px solid;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+th {
+    border: 1px solid;
+    border-collapse: collapse;
+}
+
+.os {
+    float: right;
+    text-align: right;
+}
+
+.ost {
+    transform: rotate(-90deg);
+    float: left;
+    height: 0px;
+    margin-top: 100px;
+    margin-left: -60px;
+    position: absolute
+}
+
+td {
+    border: 1px solid;
+    border-collapse: collapse;
+}
+
+
+code {
+    background-color: lightgray;
+    color: black;
+    border-radius: 2px;
+    padding: 3px;
+}
+
+#space {
+    float: right;
+    position: relative;
+}
+
+.dark-mode {
+    background-color: white;
+    color: black;
+    border-color: black;
+}
+
+body {
+    background-color: black;
+    color: white;
+    border-color: white;
+}
+
+#table2 {
+    float: right;
+}
+
+#table1 {
+    float: left;
+}
+
+#twoh {
+    width: 200px;
+}
+
+#cpy {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#cpy:hover {
+    text-decoration: underline;
+}
+
+#cpyimg {
+    margin-top: 2px;
+    margin-bottom: -2px;
+    float: right;
+    margin-right: 3px;
+    display: block;
+}
+
+#cpyppr {
+    margin-bottom: -7px;
+    margin-top: 2px;
+    float: right;
+    color: black;
+}
+
+#cpybox {
+    margin-bottom: -7px;
+    float: right;
+    color: black;
+}
+
+a:visited {
+    color: white;
+}
+
+a:link {
+    color: white;
+}
+
+.gray {
+    color: rgb(166, 166, 166);
+}
