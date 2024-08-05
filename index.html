@@ -14,7 +14,7 @@
 <table id="table1">
 <th>Client:</th>
 <tr>
-    <td>Battery Status:</td>
+    <td id="twoh">Battery Status:</td>
     <td>
           <span id="myDIVbattery">
               <b>🔋%:</b>
@@ -55,18 +55,18 @@
   Full User Agent:&nbsp;<br><br>
   Max Touch Points:&nbsp;<br>
   App name, ID, Serial:&nbsp;<br>
-  WebXR Avalible:&nbsp;
+  WebXR Avalible:&nbsp;<br>
+  Browser Size:&nbsp;
 </span>
 </td>
 <td>
-  <span id="1"></span>
-  <br>
-  <span id="mtp"></span>
-  <br>
+  <span id="1"></span><br>
+  <span id="mtp"></span><br>
   <span id="eleven1"></span>
   <span id="eleven2"></span>
   <span id="eleven3"></span><br>
-  <span id="xr"></span>
+  <span id="xr"></span><br>
+  <span id="screen_resolution"></span>
 </td>
 </tr>
 <tr>
@@ -90,14 +90,51 @@
   <td><span id="2"></span><br>Running a <span id="wifi1"></span><span id="wifi2"></span><br><span id="webrun"></span></td>
   </tr>
   <tr>
-    <td>Public Ip Adress:</td>
+    <td>
+      <span class="ost2">
+        Wifi Details:
+      </span>
+    <span class="os">
+      Candidate:&nbsp;<br>
+      Component:&nbsp;<br>
+      Protocol:&nbsp;<br>
+      Priority:&nbsp;<br>
+      Port:&nbsp;<br>
+      type:&nbsp;<br>
+      Attributes:&nbsp;<br>
+    </span>
+    </td>
+    <td>
+      <span id="11"></span><br>
+      <span id="22"></span><br>
+      <span id="33"></span><br>
+      <span id="44"></span><br>
+      <span id="55"></span><br>
+      <span id="66"></span><br>
+      <span id="77"></span>
+      <span id="88"></span>
+    </td>
+  </tr>
+  <tr>
+    <td>Public IPv4 Adress:</td>
     <td><span id="gfg"></span></td>
   </tr>
   <tr>
-    <td id="twoh">Clipboard:</td>
-    <td><span id="four" class="gray"></span></td>
+    <td>Public IPv6 Adress:</td>
+    <td><span id="ip6"></span></td>
+  </tr>
+  <tr>
+    <td>Clipboard:</td>
+    <td><span id="fo-ur" class="gray"></span></td>
+  </tr>
+  <tr>
+    <td>test:</td>
+    <td><span id="cc"></span>
+      <?php echo date('Y/m/d') ?></b> and it’s a <b><?php echo date(‘l’) ?>
+    </td>
   </tr>
 </table>
+
 
 <table id="table2">
   <th>Reigon</th>
@@ -110,7 +147,7 @@
     <td><span id="lat">-----<br>-----<br>-----<br>-----</span></td>
   </tr>
   <tr>
-    <td>Country, City:</td>
+    <td>Country, City, ZIP code:</td>
       <td><span id="Country"></span><br>
       <span id="City"></span></td>
   </tr>
@@ -122,16 +159,26 @@
   </tr>
 </table>
 
+
 <table id="table2">
     <th>Page</th>
 <tr>
     <td id="twoh">Page Load Time:</td>
-    <td><span id="load"></span></td>
+    <td><span id="load1"></span></td>
 </tr>
 <tr>
   <td>Time on Page:</td>
   <td><span id="top">0</span></td>
 </tr>
+</table>
+
+
+<table id="table2">
+  <th>Experiments (may not work)</th>
+  <tr>
+    <td id="twoh">Local IPv6:</td>
+    <td><span id="list"></span></td>
+  </tr>
 </table>
 
 <!--<table id="table2">
