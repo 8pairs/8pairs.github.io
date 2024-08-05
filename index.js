@@ -639,6 +639,3 @@ fetch("https://jsonip.com", { mode: "cors" })
       .getElementById("ip6")
       .insertAdjacentHTML("beforeend", `${JSON.stringify(ip)}`);
   });
-
-/* horror */
-
