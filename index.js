@@ -304,12 +304,11 @@ $(document).ready(() => {
   });
 });
 
-$(document).ready(() => {
 $.getJSON("http://ip-api.com/json/?callback=?", function (data) {
   console.log(data);
   $("#Country").append(data.country);
   $("#City").append(data.city);
-})};
+});
 
   var Location = document.getElementById("lat");
   navigator.geolocation.getCurrentPosition(showLocation);
