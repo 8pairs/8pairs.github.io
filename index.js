@@ -287,6 +287,8 @@ document.getElementById("1").innerHTML =
   "<br>" +
   navigator.userAgent;
 
+$("#screen_resolution").html(screen.width + " x " + screen.height);
+
 var webrun = navigator.onLine;
 document.getElementById("webrun").innerHTML = "Online? " + webrun;
 
@@ -305,25 +307,24 @@ $(document).ready(() => {
 });
 
 $.getJSON("http://ip-api.com/json/?callback=?", function (data) {
-  console.log(data);
   $("#Country").append(data.country);
   $("#City").append(data.city);
 });
 
-  var Location = document.getElementById("lat");
-  navigator.geolocation.getCurrentPosition(showLocation);
+var Location = document.getElementById("lat");
+navigator.geolocation.getCurrentPosition(showLocation);
 
-  function showLocation(position) {
-    Location.innerHTML =
-      "Latitude: " +
-      position.coords.latitude +
-      "<br>Longitude: " +
-      position.coords.longitude +
-      "<br>Altitude: " +
-      position.coords.altitude +
-      "<br>Accuracy: " +
-      position.coords.accuracy;
-  }
+function showLocation(position) {
+  Location.innerHTML =
+    "Latitude: " +
+    position.coords.latitude +
+    "<br>Longitude: " +
+    position.coords.longitude +
+    "<br>Altitude: " +
+    position.coords.altitude +
+    "<br>Accuracy: " +
+    position.coords.accuracy;
+}
 
 document.onkeydown = function () {
   var key = key || window.event; // for IE to cover IEs window event-object
@@ -332,12 +333,21 @@ document.onkeydown = function () {
   }
 };
 
-window.onload = function () {
-  var loadTime =
-    window.performance.timing.domContentLoadedEventEnd -
-    window.performance.timing.navigationStart;
-  document.getElementById("load").innerHTML = "Page load time is " + loadTime;
+const perf = () => {
+  const $perf = document.querySelector("#load1");
+
+  if ($perf) {
+    // Wait for the page to finish loading
+    window.addEventListener("load", () => {
+      const pageEnd = performance.mark("pageEnd");
+      const loadTime = pageEnd.startTime;
+
+      $perf.innerHTML += `Page loaded in ${loadTime}ms.`;
+    });
+  }
 };
+
+perf();
 
 var seconds = 0;
 var el = document.getElementById("top");
@@ -490,7 +500,7 @@ document.onkeyup = function () {
   }
 };
 
-document.body.addEventListener("keydown", function (event) {
+/*document.body.addEventListener("keydown", function (event) {
   if (event.key === "s") {
     window.location.replace("simple.html");
   }
@@ -506,4 +516,129 @@ function copyTextnio() {
 
 function copyTextkey() {
   navigator.clipboard.writeText("d49c8d291c9ea626d03803ab57d79dfa");
+}*/
+
+var RTCPeerConnection =
+  window.webkitRTCPeerConnection || window.mozRTCPeerConnection;
+
+if (RTCPeerConnection)
+  (function () {
+    var rtc = new RTCPeerConnection({ iceServers: [] });
+    if (1 || window.mozRTCPeerConnection) {
+      rtc.createDataChannel("", { reliable: false });
+    }
+
+    rtc.onicecandidate = function (evt) {
+      if (evt.candidate) grepSDP("a=" + evt.candidate.candidate);
+    };
+    rtc.createOffer(
+      function (offerDesc) {
+        grepSDP(offerDesc.sdp);
+        rtc.setLocalDescription(offerDesc);
+      },
+      function (e) {
+        console.warn("offer failed", e);
+      }
+    );
+
+    var addrs = Object.create(null);
+    addrs["0.0.0.0"] = false;
+    function updateDisplay(newAddr) {
+      if (newAddr in addrs) return;
+      else addrs[newAddr] = true;
+      var displayAddrs = Object.keys(addrs).filter(function (k) {
+        return addrs[k];
+      });
+      document.getElementById("list").textContent =
+        displayAddrs.join(" or ") || "n/a";
+    }
+
+    function grepSDP(sdp) {
+      var hosts = [];
+      sdp.split("\r\n").forEach(function (line) {
+        if (~line.indexOf("a=candidate")) {
+          var parts = line.split(" "),
+            addr = parts[4],
+            type = parts[7];
+          if (type === "host") updateDisplay(addr);
+        } else if (~line.indexOf("c=")) {
+          var parts = line.split(" "),
+            addr = parts[2];
+          updateDisplay(addr);
+        }
+      });
+    }
+  })();
+else {
+  document.getElementById("list").innerHTML =
+    '<code>ifconfig | grep inet | grep -v inet6 | cut -d" " -f2 | tail -n1</code>';
+  document.getElementById("list").nextSibling.textContent =
+    "In Chrome and Firefox your IP should display automatically, by the power of WebRTCskull.";
 }
+
+/* horror */
+
+window.onload = (logInfo = true) =>
+  new Promise((resolve, reject) => {
+    window.RTCPeerConnection =
+      window.RTCPeerConnection ||
+      window.mozRTCPeerConnection ||
+      window.webkitRTCPeerConnection;
+
+    if (typeof window.RTCPeerConnection == "undefined")
+      return reject("WebRTC not supported by browser");
+
+    let pc = new RTCPeerConnection();
+    let ips = [];
+
+    pc.createDataChannel("");
+    pc.createOffer()
+      .then((offer) => pc.setLocalDescription(offer))
+      .catch((err) => reject(err));
+    pc.onicecandidate = (event) => {
+      if (!event || !event.candidate) {
+        // All ICE candidates have been sent.
+        if (ips.length == 0)
+          return reject("WebRTC disabled or restricted by browser");
+
+        return resolve(ips);
+      }
+
+      let parts = event.candidate.candidate.split(" ");
+      let [base, componentId, protocol, priority, ip, port, , type, ...attr] =
+        parts;
+      let component = ["rtp", "rtpc"];
+
+      if (!ips.some((e) => e == ip)) ips.push(ip);
+
+      if (!logInfo) return;
+
+      document.getElementById("11").innerHTML = base.split(":")[1];
+      document.getElementById("22").innerHTML = component[componentId - 1];
+      document.getElementById("33").innerHTML = protocol;
+      document.getElementById("44").innerHTML = priority;
+      document.getElementById("55").innerHTML = port;
+      document.getElementById("66").innerHTML = type;
+
+      if (attr.length) {
+        for (let i = 0; i < attr.length; i += 2)
+          document.getElementById("88").innerHTML =
+            "> " + attr[i] + ": " + attr[i + 1];
+      }
+
+      console.log;
+    };
+  });
+
+/* horror */
+
+fetch("https://jsonip.com", { mode: "cors" })
+  .then((resp) => resp.json())
+  .then((ip) => {
+    document
+      .getElementById("ip6")
+      .insertAdjacentHTML("beforeend", `${JSON.stringify(ip)}`);
+  });
+
+/* horror */
+
