@@ -24,6 +24,15 @@ th {
     position: absolute
 }
 
+.ost2 {
+    transform: rotate(-90deg);
+    float: left;
+    height: 0px;
+    margin-top: 70px;
+    margin-left: -40px;
+    position: absolute
+}
+
 td {
     border: 1px solid;
     border-collapse: collapse;
