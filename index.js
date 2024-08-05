@@ -369,10 +369,6 @@ document.getElementById("ram").innerHTML = two + "gb, ";
 var three = navigator.webdriver;
 document.getElementById("clip").innerHTML = three;
 
-var four = navigator.clipboard
-  .readText()
-  .then((clipText) => (document.querySelector("#four").innerText = clipText));
-
 var five = navigator.languages;
 document.getElementById("five").innerHTML = five;
 
