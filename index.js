@@ -1,3 +1,4 @@
+
 var clockElement = document.getElementById("clock");
 
 function clock() {
@@ -639,3 +640,12 @@ fetch("https://jsonip.com", { mode: "cors" })
       .getElementById("ip6")
       .insertAdjacentHTML("beforeend", `${JSON.stringify(ip)}`);
   });
+
+/* horror */
+
+document.getElementById("hostname1").innerHTML = ("Hostname:", window.location.origin);
+document.getElementById("hostname2").innerHTML = ("Hostname:", window.location.host);
+document.getElementById("hostname3").innerHTML = ("Hostname:", window.location.hostname);
+document.getElementById("hostname4").innerHTML = ("Hostname:", window.location.protocol);
+document.getElementById("hostname5").innerHTML = ("Hostname:", window.location.pathname);
+document.getElementById("hostname6").innerHTML = ("Hostname:", window.location.port);
