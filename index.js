@@ -1,4 +1,3 @@
-
 var clockElement = document.getElementById("clock");
 
 function clock() {
@@ -180,6 +179,7 @@ navigator.getBattery().then(function (battery) {
     // system
     var os = unknown;
     var clientStrings = [
+      { s: "Windows 11", r: /(Windows 11.0)/ },
       { s: "Windows 10", r: /(Windows 10.0|Windows NT 10.0)/ },
       { s: "Windows 8.1", r: /(Windows 8.1|Windows NT 6.3)/ },
       { s: "Windows 8", r: /(Windows 8|Windows NT 6.2)/ },
@@ -639,9 +639,7 @@ fetch("https://jsonip.com", { mode: "cors" })
 
 /* horror */
 
-document.getElementById("hostname1").innerHTML = ("Hostname:", window.location.origin);
-document.getElementById("hostname2").innerHTML = ("Hostname:", window.location.host);
-document.getElementById("hostname3").innerHTML = ("Hostname:", window.location.hostname);
-document.getElementById("hostname4").innerHTML = ("Hostname:", window.location.protocol);
-document.getElementById("hostname5").innerHTML = ("Hostname:", window.location.pathname);
-document.getElementById("hostname6").innerHTML = ("Hostname:", window.location.port);
+document.getElementById("hostname").innerHTML = ("Hostname:", window.location.origin);
+
+/* horror */
+
