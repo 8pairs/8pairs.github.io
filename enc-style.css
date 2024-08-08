@@ -1,0 +1,81 @@
+body {
+    background-color: darkslategray;
+    margin: 0px;
+    color: white;
+    font-weight: bold;
+    font-family: monospace;
+    font-size: 1.2rem;
+}
+
+.enc-div {
+    background-color: rgb(32, 60, 60);
+    height: 180px;
+    width: 640px;
+    border-radius: 20px;
+    border: 5px solid rgb(93, 107, 121);
+}
+
+.left {
+    height: 100vh;
+    width: 49%;
+    float: left;
+    margin: auto;
+}
+
+.right {
+    height: 100vh;
+    width: 49%;
+    float: right;
+    margin: auto;
+}
+
+.basic-enc,
+.medium-enc,
+.high-enc {
+    float: left;
+    margin-top: 30px;
+    margin-left: 40px;
+    padding: 10px;
+}
+
+.inner1 {
+    text-align: center;
+    margin-top: -30px;
+}
+
+.inner2 {
+    text-align: center;
+    margin-top: 5px;
+}
+
+.make-your-own-enc1,
+.make-your-own-enc2,
+.make-your-own-enc3 {
+    float: right;
+    margin-top: 30px;
+    margin-right: 40px;
+    padding: 10px;
+}
+
+h6 {
+    color: gray;
+    margin-top: 3px;
+}
+
+.example {
+    color: rgb(135, 164, 184);
+    font-size: 14px;
+}
+
+input {
+    height: 50px;
+    width: 300px;
+    color: rgb(147, 199, 216);
+    border-radius: 10px;
+    background-color: rgb(40, 102, 102);
+    border: 2px solid rgb(59, 143, 143);
+    font-weight: bold;
+    font-family: monospace;
+    font-size: 14px;
+    font-size: 1.2rem;
+}

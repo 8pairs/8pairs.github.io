@@ -1,0 +1,86 @@
+<html>
+<head>
+    <link
+      rel="shortcut icon"
+      href="open.png"
+      type="image/x-icon" />
+    <title>Encrypter</title>
+    <link rel="stylesheet" href="enc-style.css" />
+</head>
+<body>
+    
+    <div class="left">
+        <div class="basic-enc enc-div">
+            Basic Encrypter <b class="example">· Single diget numerical encryption</b>
+            <h6>
+                Extremely easy to crack.
+            </h6>
+            <br>
+            <div class="inner1">
+                <input 
+                    onkeyup="ask()" 
+                    spellcheck="false" 
+                    id="input"
+                    autocomplete="off"
+                ></input>
+                <input 
+                    spellcheck="false" 
+                    id="output"
+                    autocomplete="off"
+                ></input>
+            </div>
+            <div class="inner2">
+                <input 
+                    onkeyup="askAgain()" 
+                    spellcheck="false" 
+                    id="inputAgain" 
+                    autocomplete="off"
+                ></input>
+                <input 
+                    spellcheck="false" 
+                    id="outputAgain"
+                    autocomplete="off"
+                ></input>
+            </div>
+        </div>
+
+        <div class="medium-enc enc-div">
+            Elaborate Encrypter <b class="example">· 4 diget numerical encryption</b>
+            <h6>
+                A task to crack.
+            </h6>
+        </div>
+
+        <div class="high-enc enc-div">
+            Advanced Encrypter <b class="example">· 8 diget alphanumeric encryption</b>
+            <h6>
+                Advanced program required to crack.
+            </h6>
+        </div>
+    </div>
+    <!-- left side -->
+
+    <div class="right">
+        <div class="make-your-own-enc1 enc-div">
+            Costom Key Encrypter <b class="example">· 12 diget alphanumeric encryption with numerical key</b>
+            <h6 title="May be crackable with access to this website, or your key.">
+                Uncrackable*
+            </h6>
+        </div>
+        <div class="make-your-own-enc2 enc-div">
+            -
+            <h6>
+                -
+            </h6>
+        </div>
+        <div class="make-your-own-enc3 enc-div">
+            -
+            <h6>
+                -
+            </h6>
+        </div>
+    </div>
+
+<script src="enc-index.js"></script>
+</body>
+</html>
