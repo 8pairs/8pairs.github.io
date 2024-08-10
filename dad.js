@@ -118,3 +118,11 @@ function draw() {
   document.getElementById("result1").innerHTML = textArray[randomNumber];
   setInterval(show, 200);
 }
+
+function closeFifth() {
+  but1 = document.getElementById("but1");
+  coverop = document.getElementById("cover4");
+
+  but1.innerHTML = "Out of draws!";
+  coverop.style.display = "block";
+}
