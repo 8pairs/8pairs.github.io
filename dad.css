@@ -40,6 +40,29 @@ body {
     margin-bottom: 50px;
 }
 
+#but1 {
+font-size: 16px;
+width: 130px;
+padding: 10px 10px;
+min-height: 30px;
+}
+
+#op1,
+#op2,
+#op3,
+#op4,
+#op5 {
+    padding: 5px;
+    font-weight: bold;
+    font-family: monospace;
+    font-size: 1rem;
+    border-radius: 15px;
+    background-color: rgb(207, 231, 251);
+    color: cadetblue;
+    border: 2px solid cadetblue;
+    width: 100px;
+}
+
 #cover:hover~#roll {
     animation: tilt-n-move-shaking 200ms infinite;
 }
@@ -143,32 +166,6 @@ hr {
     border-radius: 14px;
 }
 
-#coverr1 {
-    margin-top: 100px;
-    margin-left: 40px;
-    height: 100px;
-    width: 120px;
-    position: absolute;
-    float: left;
-    z-index: 10;
-    cursor: not-allowed;
-    backdrop-filter: blur(3px);
-    border-radius: 14px;
-}
-
-#coverr2 {
-    margin-top: 100px;
-    margin-left: 40px;
-    height: 100px;
-    width: 120px;
-    position: absolute;
-    float: left;
-    z-index: 10;
-    cursor: not-allowed;
-    backdrop-filter: blur(3px);
-    border-radius: 14px;
-}
-
 #res1 {
     z-index: 5;
     margin-top: 50px;
@@ -223,8 +220,6 @@ hr {
     margin-left: 50px;
 }
 
-#result1,
-#result2,
-#result3 {
+#result1 {
     opacity: 0;
 }

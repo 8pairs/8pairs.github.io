@@ -24,12 +24,12 @@
             id="roll2" 
             class="button-27" 
             role="button" 
-            onclick="closeSecond(), rollEr2()">Reroll!</button>
+            onclick="closeSecond(), rollEr()">Reroll!</button>
         <button 
             id="roll3" 
             class="button-27" 
             role="button" 
-            onclick="closeThird(), rollEr3()">Reroll!</button>
+            onclick="closeThird(), rollEr()">Reroll!</button>
         </div>
         <div id="vtext">
 
@@ -50,16 +50,20 @@
 
 <div id="holder">
 
-<div id="res1"><u>Spin 1:</u></div>
-<span id="result1"><br></span>
+    <div id="res1"><u>Result:</u></div>
+    <span id="result1"></span>
+    <br>
+    <br>
 
-<div id="coverr1"></div>
-<div id="res2"><u>Spin 2:</u></div>
-<span id="result2"><br></span>
-
-<div id="coverr2"></div>
-<div id="res3"><u>Spin 3:</u></div>
-<span id="result3"><br></span>
+    <p>Or, draw <br>from list</p>
+    <input spellcheck="false" autocomplete="off" id="op1">
+    <input spellcheck="false" autocomplete="off" id="op2">
+    <input spellcheck="false" autocomplete="off" id="op3">
+    <input spellcheck="false" autocomplete="off" id="op4">
+    <input spellcheck="false" autocomplete="off" id="op5">
+    <br>
+    <br>
+    <button id="but1" class="button-27" onclick="draw()">Draw From List</button>
 
 </div>
 
