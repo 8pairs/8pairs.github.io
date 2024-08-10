@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link
+      rel="shortcut icon"
+      href="open.png"
+      type="image/x-icon" />
+    <title>Spinner!</title>
+    <link rel="stylesheet" href="dad.css" />
+</head>
+<body>
+
+    <div id="roller">
+        <div id="buttons">
+            <div id="cover"></div>
+            <div id="cover2"></div>
+            <div id="cover3"></div>
+        <button 
+            id="roll" 
+            class="button-27" 
+            role="button" 
+            onclick="closeFirst(), rollEr()">Click me to Spin!</button>
+        <button 
+            id="roll2" 
+            class="button-27" 
+            role="button" 
+            onclick="closeSecond(), rollEr2()">Reroll!</button>
+        <button 
+            id="roll3" 
+            class="button-27" 
+            role="button" 
+            onclick="closeThird(), rollEr3()">Reroll!</button>
+        </div>
+        <div id="vtext">
+
+<svg width="630px" height="200px" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+    overflow="auto" shape-rendering="auto" fill="#ffffff" id="vimg">
+    <defs>
+        <path id="wavepath" d="M 0 2000 0 500 Q 150 325 300 500 t 300 0 300 0 300 0 300 0 300 0  v1000 z" />
+        <path id="motionpath" d="M -600 0 0 0" />
+    </defs>
+    <g>
+        <use xlink:href="#wavepath" y="-411" fill="#86eba8">
+            <animateMotion dur="25s" repeatCount="indefinite">
+                <mpath xlink:href="#motionpath" />
+            </animateMotion>
+        </use>
+    </g>
+</svg>
+
+<div id="holder">
+
+<div id="res1"><u>Spin 1:</u></div>
+<span id="result1"><br></span>
+
+<div id="coverr1"></div>
+<div id="res2"><u>Spin 2:</u></div>
+<span id="result2"><br></span>
+
+<div id="coverr2"></div>
+<div id="res3"><u>Spin 3:</u></div>
+<span id="result3"><br></span>
+
+</div>
+
+</div>
+</div>
+
+<script src="dad.js"></script>
+</body>
+</html>
