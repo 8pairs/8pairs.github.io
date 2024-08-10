@@ -139,7 +139,7 @@ hr {
     float: left;
     z-index: 10;
     cursor: not-allowed;
-    backdrop-filter: blur(1px);
+    backdrop-filter: blur(2px);
     border-radius: 14px;
     display: none;
 }

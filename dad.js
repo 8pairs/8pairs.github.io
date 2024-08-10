@@ -15,7 +15,7 @@ function closeSecond() {
 
   roller2.innerHTML = "Out of spins!";
   cover2.style.display = "block";
-  other2.style.display = "none"
+  other2.style.display = "none";
 }
 
 function closeThird() {
@@ -71,7 +71,7 @@ function show() {
   } else {
     clearInterval(intervalID);
   }
-} 
+}
 
 function show2() {
   var body = document.getElementById("result2");
@@ -82,7 +82,7 @@ function show2() {
   } else {
     clearInterval(intervalID);
   }
-} 
+}
 
 function show3() {
   var body = document.getElementById("result3");
@@ -93,8 +93,7 @@ function show3() {
   } else {
     clearInterval(intervalID);
   }
-} 
-
+}
 
 function draw() {
   let op1 = document.getElementById("op1");
@@ -107,13 +106,7 @@ function draw() {
   let str3 = op3.value;
   let str4 = op4.value;
   let str5 = op5.value;
-  var textArray = [
-    str1,
-    str2,
-    str3,
-    str4,
-    str5,
-  ];
+  var textArray = [str1, str2, str3, str4, str5];
   var randomNumber = Math.floor(Math.random() * textArray.length);
   document.getElementById("result1").innerHTML = textArray[randomNumber];
   setInterval(show, 200);
@@ -125,4 +118,73 @@ function closeFifth() {
 
   but1.innerHTML = "Out of draws!";
   coverop.style.display = "block";
+}
+
+function validateForm() {
+  var uname1 = document.getElementById("op1").value;
+  var uname2 = document.getElementById("op2").value;
+  var uname3 = document.getElementById("op3").value;
+  var uname4 = document.getElementById("op4").value;
+  var uname5 = document.getElementById("op5").value;
+  if (uname1 == ""
+  ) {
+    setTimeout(() => {
+      coverop = document.getElementById("cover4");
+      result0 = document.getElementById("result1");
+      dr = document.getElementById("but1");
+
+      coverop.style.display = "none";
+      result0.innerHTML = "Feild(s) Are Empty!";
+      dr.innerHTML = "Draw From List";
+    }, 20);
+    return false;
+  }
+  if (uname2 == "") {
+    setTimeout(() => {
+      coverop = document.getElementById("cover4");
+      result0 = document.getElementById("result1");
+      dr = document.getElementById("but1");
+
+      coverop.style.display = "none";
+      result0.innerHTML = "Feild(s) Are Empty!";
+      dr.innerHTML = "Draw From List";
+    }, 20);
+    return false;
+  }
+  if (uname3 == "") {
+    setTimeout(() => {
+      coverop = document.getElementById("cover4");
+      result0 = document.getElementById("result1");
+      dr = document.getElementById("but1");
+
+      coverop.style.display = "none";
+      result0.innerHTML = "Feild(s) Are Empty!";
+      dr.innerHTML = "Draw From List";
+    }, 20);
+    return false;
+  }
+  if (uname4 == "") {
+    setTimeout(() => {
+      coverop = document.getElementById("cover4");
+      result0 = document.getElementById("result1");
+      dr = document.getElementById("but1");
+
+      coverop.style.display = "none";
+      result0.innerHTML = "Feild(s) Are Empty!";
+      dr.innerHTML = "Draw From List";
+    }, 20);
+    return false;
+  }
+  if (uname5 == "") {
+    setTimeout(() => {
+      coverop = document.getElementById("cover4");
+      result0 = document.getElementById("result1");
+      dr = document.getElementById("but1");
+
+      coverop.style.display = "none";
+      result0.innerHTML = "Feild(s) Are Empty!";
+      dr.innerHTML = "Draw From List";
+    }, 20);
+    return false;
+  }
 }
