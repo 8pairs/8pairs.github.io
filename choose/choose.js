@@ -52,7 +52,6 @@ function rollEr() {
     "Burger Deck",
     "Sushi Deli 3",
     "Eureka!",
-    "Taco Bell",
   ];
   var randomNumber = Math.floor(Math.random() * textArray.length);
   document.getElementById("result1").innerHTML = textArray[randomNumber];
@@ -134,7 +133,7 @@ function validateForm() {
       dr = document.getElementById("but1");
 
       coverop.style.display = "none";
-      result0.innerHTML = "Feild 1 is Empty!";
+      result0.innerHTML = "Field 1" + <br> + "is Empty!";
       dr.innerHTML = "Draw From List";
     }, 20);
     return false;
@@ -146,7 +145,7 @@ function validateForm() {
       dr = document.getElementById("but1");
 
       coverop.style.display = "none";
-      result0.innerHTML = "Feild 2 is Empty!";
+      result0.innerHTML = "Field 2" + <br> + "is Empty!";
       dr.innerHTML = "Draw From List";
     }, 20);
     return false;
@@ -158,7 +157,7 @@ function validateForm() {
       dr = document.getElementById("but1");
 
       coverop.style.display = "none";
-      result0.innerHTML = "Feild 3 is Empty!";
+      result0.innerHTML = "Field 3" + <br> + "is Empty!";
       dr.innerHTML = "Draw From List";
     }, 20);
     return false;
@@ -170,7 +169,7 @@ function validateForm() {
       dr = document.getElementById("but1");
 
       coverop.style.display = "none";
-      result0.innerHTML = "Feild 4 is Empty!";
+      result0.innerHTML = "Field 4" + <br> + "is Empty!";
       dr.innerHTML = "Draw From List";
     }, 20);
     return false;
@@ -182,7 +181,7 @@ function validateForm() {
       dr = document.getElementById("but1");
 
       coverop.style.display = "none";
-      result0.innerHTML = "Feild 5 is Empty!";
+      result0.innerHTML = "Field 5" + <br> + "is Empty!";
       dr.innerHTML = "Draw From List";
     }, 20);
     return false;
