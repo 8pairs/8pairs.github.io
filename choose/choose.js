@@ -134,7 +134,7 @@ function validateForm() {
       dr = document.getElementById("but1");
 
       coverop.style.display = "none";
-      result0.innerHTML = "Feild(s) Are Empty!";
+      result0.innerHTML = "Feild 1 is Empty!";
       dr.innerHTML = "Draw From List";
     }, 20);
     return false;
@@ -146,7 +146,7 @@ function validateForm() {
       dr = document.getElementById("but1");
 
       coverop.style.display = "none";
-      result0.innerHTML = "Feild(s) Are Empty!";
+      result0.innerHTML = "Feild 2 is Empty!";
       dr.innerHTML = "Draw From List";
     }, 20);
     return false;
@@ -158,7 +158,7 @@ function validateForm() {
       dr = document.getElementById("but1");
 
       coverop.style.display = "none";
-      result0.innerHTML = "Feild(s) Are Empty!";
+      result0.innerHTML = "Feild 3 is Empty!";
       dr.innerHTML = "Draw From List";
     }, 20);
     return false;
@@ -170,7 +170,7 @@ function validateForm() {
       dr = document.getElementById("but1");
 
       coverop.style.display = "none";
-      result0.innerHTML = "Feild(s) Are Empty!";
+      result0.innerHTML = "Feild 4 is Empty!";
       dr.innerHTML = "Draw From List";
     }, 20);
     return false;
@@ -182,7 +182,7 @@ function validateForm() {
       dr = document.getElementById("but1");
 
       coverop.style.display = "none";
-      result0.innerHTML = "Feild(s) Are Empty!";
+      result0.innerHTML = "Feild 5 is Empty!";
       dr.innerHTML = "Draw From List";
     }, 20);
     return false;
