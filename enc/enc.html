@@ -5,7 +5,7 @@
       href="ec-dc.png"
       type="image/x-icon" />
     <title>Encrypter</title>
-    <link rel="stylesheet" href="enc-style.css" />
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
     
@@ -83,13 +83,40 @@
             <h6>
                 Advanced program required to crack.
             </h6>
+            <br>
+            <div class="inner1">
+                <input 
+                    onkeyup="askTwelve()" 
+                    spellcheck="false" 
+                    id="input-twelve"
+                    autocomplete="off"
+                ></input>
+                <input 
+                    spellcheck="false" 
+                    id="output-twelve"
+                    autocomplete="off"
+                ></input>
+            </div>
+            <div class="inner2">
+                <input 
+                    onkeyup="askAgainTwelve()" 
+                    spellcheck="false" 
+                    id="inputAgain-twelve" 
+                    autocomplete="off"
+                ></input>
+                <input 
+                    spellcheck="false" 
+                    id="outputAgain-twelve"
+                    autocomplete="off"
+                ></input>
+            </div>
         </div>
     </div>
     <!-- left side -->
 
     <div class="right">
         <div class="make-your-own-enc1 enc-div">
-            Costom Key Encrypter <b class="example">· 12 diget alphanumeric encryption with numerical key</b>
+            Custom Key Encrypter <b class="example">· 12 diget alphanumeric encryption with numerical key</b>
             <h6 title="May be crackable with access to this website, or your key.">
                 Uncrackable*
             </h6>
@@ -108,6 +135,6 @@
         </div>
     </div>
 
-<script src="enc-index.js"></script>
+<script src="index.js"></script>
 </body>
 </html>
