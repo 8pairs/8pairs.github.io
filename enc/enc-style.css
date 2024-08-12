@@ -79,3 +79,9 @@ input {
     font-size: 14px;
     font-size: 1.2rem;
 }
+
+::placeholder {
+    text-align: center;
+    font-size: 14px;
+    color: rgb(135, 164, 184);
+}
