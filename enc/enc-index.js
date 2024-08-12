@@ -483,5 +483,5 @@ function ask() {
       /(?:\~)/gi,
       (matched) => mapObj[matched]
     );
-    document.getElementById("outputAgain-ela").value = strAgain;
+    document.getElementById("outputAgain-twelve").value = strAgain;
   }
