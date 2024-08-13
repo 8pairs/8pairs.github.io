@@ -128,10 +128,61 @@
 
     <div class="right">
         <div class="make-your-own-enc1 enc-div">
-            Custom Key Encrypter <b class="example">· 12 diget alphanumeric encryption with numerical key</b>
+            Custom Key Encrypter <b class="example">· Text</b>
             <h6 title="May be crackable with access to this website, or your key.">
                 Uncrackable*
             </h6>
+            <br>
+            <div class="inner1">
+                <input 
+                    placeholder="Encryption input"
+                    onkeyup="advE()" 
+                    spellcheck="false" 
+                    id="input-adve"
+                    autocomplete="off"
+                ></input>
+
+                <input 
+                    placeholder="Key"
+                    onkeyup="advE()" 
+                    spellcheck="false" 
+                    id="input-mtp"
+                    autocomplete="off"
+                    maxlength="2"
+                ></input>
+
+                <input 
+                    placeholder="Ecryption output"
+                    spellcheck="false" 
+                    id="output-adve"
+                    autocomplete="off"
+                ></input>
+            </div>
+            <div class="inner2">
+                <input 
+                    placeholder="Decryption input"
+                    onkeyup="advEt()" 
+                    spellcheck="false" 
+                    id="inputAgain-adve" 
+                    autocomplete="off"
+                ></input>
+
+                <input 
+                    placeholder="Key"
+                    onkeyup="advE()" 
+                    spellcheck="false" 
+                    id="input-mtp2"
+                    autocomplete="off"
+                    maxlength="2"
+                ></input>
+                
+                <input 
+                    placeholder="Decryption output"
+                    spellcheck="false" 
+                    id="outputAgain-adve"
+                    autocomplete="off"
+                ></input>
+            </div>
         </div>
         <div class="make-your-own-enc2 enc-div">
             -
@@ -148,5 +199,6 @@
     </div>
 
 <script src="enc-index.js"></script>
+<script src="enc-adv.js"></script>
 </body>
 </html>

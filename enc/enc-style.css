@@ -69,7 +69,7 @@ h6 {
 
 input {
     height: 50px;
-    width: 300px;
+    width: 250px;
     color: rgb(147, 199, 216);
     border-radius: 10px;
     background-color: rgb(40, 102, 102);
@@ -84,4 +84,10 @@ input {
     text-align: center;
     font-size: 14px;
     color: rgb(135, 164, 184);
+}
+
+#input-mtp,
+#input-mtp2 {
+    width: 50px;
+    text-align: center;
 }
