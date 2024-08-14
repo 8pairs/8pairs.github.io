@@ -128,58 +128,35 @@
 
     <div class="right">
         <div class="make-your-own-enc1 enc-div">
-            Custom Key Encrypter <b class="example">· Text</b>
+            Custom Key Encrypter <b class="example">· Running Block TEA Tiny encryption algorithm</b>
             <h6 title="May be crackable with access to this website, or your key.">
                 Uncrackable*
             </h6>
             <br>
             <div class="inner1">
+                <div id="cover1"></div>
+                <div id="cover2"></div>
                 <input 
                     placeholder="Encryption input"
-                    onkeyup="advE()" 
                     spellcheck="false" 
-                    id="input-adve"
-                    autocomplete="off"
-                ></input>
-
-                <input 
-                    placeholder="Key"
-                    onkeyup="advE()" 
-                    spellcheck="false" 
-                    id="input-mtp"
-                    autocomplete="off"
-                    maxlength="2"
-                ></input>
-
-                <input 
-                    placeholder="Ecryption output"
-                    spellcheck="false" 
-                    id="output-adve"
+                    id="text"
                     autocomplete="off"
                 ></input>
             </div>
             <div class="inner2">
                 <input 
-                    placeholder="Decryption input"
-                    onkeyup="advEt()" 
+                    placeholder="Key input"
+                    onkeyup="getPV()" 
                     spellcheck="false" 
-                    id="inputAgain-adve" 
+                    id="password"
                     autocomplete="off"
+                    maxlength="10"
                 ></input>
 
                 <input 
-                    placeholder="Key"
-                    onkeyup="advE()" 
+                    placeholder="Decryption output / input"
                     spellcheck="false" 
-                    id="input-mtp2"
-                    autocomplete="off"
-                    maxlength="2"
-                ></input>
-                
-                <input 
-                    placeholder="Decryption output"
-                    spellcheck="false" 
-                    id="outputAgain-adve"
+                    id="encrypt"
                     autocomplete="off"
                 ></input>
             </div>
@@ -198,6 +175,7 @@
         </div>
     </div>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="enc-index.js"></script>
 <script src="enc-adv.js"></script>
 </body>
