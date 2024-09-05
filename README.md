@@ -8,8 +8,5 @@ Random websites
 ## enc/enc.html
 ### Site for extremely basic alphanumeric P2P encryption
 
-## choose/choose.html
-### Site for randomly picking places to eat
-
 ## search/search.html
-### Site for searching all avalibe file extension types and descriptions
+### Site for searching all avalible file extension types and descriptions
