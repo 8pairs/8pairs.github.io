@@ -294,9 +294,8 @@ document.getElementById("webrun").innerHTML = "Online? " + webrun;
 
 document.addEventListener("DOMContentLoaded", function () {
   let content = document.getElementById("2");
-  let textContent = `Your network status is ${
-    navigator.onLine ? "Online ✅" : "Offline ❌"
-  } `;
+  let textContent = `Your network status is ${navigator.onLine ? "Online ✅" : "Offline ❌"
+    } `;
   content.textContent = textContent;
 });
 
@@ -311,20 +310,20 @@ $.getJSON("http://ip-api.com/json/?callback=?", function (data) {
   $("#City").append(data.city);
 });
 
-var Location = document.getElementById("lat");
-navigator.geolocation.getCurrentPosition(showLocation);
+// var Location = document.getElementById("lat");
+// navigator.geolocation.getCurrentPosition(showLocation);
 
-function showLocation(position) {
-  Location.innerHTML =
-    "Latitude: " +
-    position.coords.latitude +
-    "<br>Longitude: " +
-    position.coords.longitude +
-    "<br>Altitude: " +
-    position.coords.altitude +
-    "<br>Accuracy: " +
-    position.coords.accuracy;
-}
+// function showLocation(position) {
+//   Location.innerHTML =
+//     "Latitude: " +
+//     position.coords.latitude +
+//     "<br>Longitude: " +
+//     position.coords.longitude +
+//     "<br>Altitude: " +
+//     position.coords.altitude +
+//     "<br>Accuracy: " +
+//     position.coords.accuracy;
+// }
 
 document.onkeydown = function () {
   var key = key || window.event; // for IE to cover IEs window event-object
@@ -372,7 +371,7 @@ var five = navigator.languages;
 document.getElementById("five").innerHTML = five;
 
 var mtp = navigator.maxTouchPoints;
-document.getElementById("mtp").innerHTML = "MaxTouchPoints: " + mtp;
+document.getElementById("mtp").innerHTML = "MTP: " + mtp;
 
 navigator.mediaCapabilities
   .decodingInfo({
@@ -385,15 +384,12 @@ navigator.mediaCapabilities
     },
   })
   .then((result) => {
-    document.getElementById("six").innerHTML = `This configuration is ${
-      result.supported ? "" : "not "
-    }supported, `;
-    document.getElementById("seven").innerHTML = `${
-      result.smooth ? "" : "not "
-    }smooth, and `;
-    document.getElementById("eight").innerHTML = `${
-      result.powerEfficient ? "" : "not "
-    }power efficient.`;
+    document.getElementById("six").innerHTML = `This configuration is ${result.supported ? "" : "not "
+      }supported, `;
+    document.getElementById("seven").innerHTML = `${result.smooth ? "" : "not "
+      }smooth, and `;
+    document.getElementById("eight").innerHTML = `${result.powerEfficient ? "" : "not "
+      }power efficient.`;
   });
 
 if ("xr" in window.navigator) {
@@ -463,7 +459,7 @@ try {
     canvas.getContext("experimental-webgl", {
       powerPreference: "high-performance",
     });
-} catch (e) {}
+} catch (e) { }
 
 if (gl) {
   debugInfo = gl.getExtension("WEBGL_debug_renderer_info");
@@ -496,12 +492,7 @@ document.onkeyup = function () {
   }
 };
 
-/*document.body.addEventListener("keydown", function (event) {
-  if (event.key === "s") {
-    window.location.replace("simple.html");
-  }
-});
-
+/*
 function copyTextdns() {
   navigator.clipboard.writeText("167.89.91.171");
 }
@@ -638,9 +629,56 @@ fetch("https://jsonip.com", { mode: "cors" })
 
 /* horror */
 
-document.getElementById("hostname1").innerHTML = ("Hostname:", window.location.origin);
-document.getElementById("hostname2").innerHTML = ("Hostname:", window.location.host);
-document.getElementById("hostname3").innerHTML = ("Hostname:", window.location.hostname);
-document.getElementById("hostname4").innerHTML = ("Hostname:", window.location.protocol);
-document.getElementById("hostname5").innerHTML = ("Hostname:", window.location.pathname);
-document.getElementById("hostname6").innerHTML = ("Hostname:", window.location.port);
+document.getElementById("hostname1").innerHTML =
+  ("Hostname:", window.location.origin);
+document.getElementById("hostname2").innerHTML =
+  ("Hostname:", window.location.host);
+document.getElementById("hostname3").innerHTML =
+  ("Hostname:", window.location.hostname);
+document.getElementById("hostname4").innerHTML =
+  ("Hostname:", window.location.protocol);
+document.getElementById("hostname5").innerHTML =
+  ("Hostname:", window.location.pathname);
+document.getElementById("hostname6").innerHTML =
+  ("Hostname:", window.location.port);
+
+// api?
+
+const supported = "contacts" in navigator && "ContactsManager" in window;
+document.getElementById("cpapi").innerHTML = supported
+
+// SERIAL 
+
+document.body.addEventListener("keydown", function (event) {
+  if (event.key === "s") {
+    serialP()
+  }
+});
+
+async function serialP() {
+
+  await navigator.serial.requestPort();
+  alert(await navigator.serial.getPorts());
+
+};
+
+// STORAGE
+
+if ('storage' in navigator && 'estimate' in navigator.storage) {
+  navigator.storage.estimate().then(({ usage, quota }) => {
+    document.getElementById('esti').innerHTML = (`Using ${usage} out of ${quota} bytes.`);
+  });
+}
+
+// focus?
+
+window.addEventListener('focus', function() {
+  document.getElementById('focus').innerHTML = "Focused"
+});
+
+window.addEventListener('blur', function() {
+  document.getElementById('focus').innerHTML = "Unfocused"
+});
+
+// 
+

@@ -74,8 +74,8 @@
   <td><span id="web"></span><span id="web2"></span></td>
 </tr>
 <tr>
-  <td>Cores, RAM, webdriver</td>
-  <td><span id="cpu"></span><span id="ram"></span><span id="clip"></span></td>
+  <td>Cores, RAM, webdriver<br>Contact Picker API</td>
+  <td><span id="cpu"></span><span id="ram"></span><span id="clip"></span><br><span id="cpapi"></span></td>
 </tr>
 <tr>
   <td>Media Capabilities:</td>
@@ -100,7 +100,7 @@
       Protocol:&nbsp;<br>
       Priority:&nbsp;<br>
       Port:&nbsp;<br>
-      type:&nbsp;<br>
+      Type:&nbsp;<br>
       Attributes:&nbsp;<br>
     </span>
     </td>
@@ -161,6 +161,10 @@
   <td><span id="top">0</span></td>
 </tr>
 <tr>
+  <td>Focused?:</td>
+  <td><span id="focus">null</span></td>
+</tr>
+<tr>
   <td>Page Breakdown:</td>
   <td>
     <span id="hostname1"></span><br>
@@ -179,6 +183,10 @@
   <tr>
     <td id="twoh">Local IPv6:</td>
     <td><span id="list"></span></td>
+  </tr>
+  <tr>
+    <td>Estimated Storage Quota:</td>
+    <td><span id="esti"></span></td>
   </tr>
 </table>
 
@@ -216,6 +224,8 @@
   <code>space</code> to reload
   
   <code>d</code> for dark mode
+  
+  <code>s</code> for serial ports
 </pre>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
