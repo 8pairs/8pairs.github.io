@@ -1,3 +1,4 @@
+
 <html>
 <head>
     <link
@@ -11,7 +12,7 @@
     
     <div class="left">
         <div class="basic-enc enc-div">
-            Basic Encrypter <b class="example">· 3 diget numerical encryption</b>
+            Basic Encrypter <b class="example">· 1-3 diget numerical encryption</b>
             <h6>
                 Extremely easy to crack.
             </h6>
@@ -87,7 +88,7 @@
         </div>
 
         <div class="high-enc enc-div">
-            Advanced Encrypter <b class="example">· 8 diget alphanumeric encryption</b>
+            Advanced Encrypter <b class="example">· 12 diget alphanumeric encryption</b>
             <h6>
                 Advanced program required to crack.
             </h6>
@@ -128,10 +129,38 @@
 
     <div class="right">
         <div class="make-your-own-enc1 enc-div">
-            Custom Key Encrypter <b class="example">· 12 diget alphanumeric encryption with numerical key</b>
+            Custom Key Encrypter <b class="example">· Running Block TEA Tiny encryption algorithm</b>
             <h6 title="May be crackable with access to this website, or your key.">
                 Uncrackable*
             </h6>
+            <br>
+            <div class="inner1">
+                <div id="cover1"></div>
+                <div id="cover2"></div>
+                <input 
+                    placeholder="Encryption input"
+                    spellcheck="false" 
+                    id="text"
+                    autocomplete="off"
+                ></input>
+            </div>
+            <div class="inner2">
+                <input 
+                    placeholder="Key input"
+                    onkeyup="getPV()" 
+                    spellcheck="false" 
+                    id="password"
+                    autocomplete="off"
+                    maxlength="10"
+                ></input>
+
+                <input 
+                    placeholder="Decryption output / input"
+                    spellcheck="false" 
+                    id="encrypt"
+                    autocomplete="off"
+                ></input>
+            </div>
         </div>
         <div class="make-your-own-enc2 enc-div">
             -
@@ -147,6 +176,8 @@
         </div>
     </div>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="enc-index.js"></script>
+<script src="enc-adv.js"></script>
 </body>
 </html>
