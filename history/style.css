@@ -1,0 +1,139 @@
+body {
+    padding: 0px;
+    margin: 0;
+    width: 696px;
+    background-color: black;
+}
+
+b {
+    text-decoration: underline;
+}
+
+.dot>p {
+    text-align: left;
+}
+
+.dotf>p {
+    text-align: right;
+}
+
+#zero {
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: slateblue;
+}
+
+#one {
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: limegreen;
+}
+
+#two {
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: burlywood;
+}
+
+#three {
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: crimson;
+}
+
+#four {
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: dimgray;
+}
+
+#k20 {
+    font-family: monospace;
+    font-size: 30px;
+    font-weight: bolder;
+    margin-top: -5px;
+    margin-bottom: 10px
+}
+
+.dot>p {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 50px;
+    margin-top: 0px;
+    width: 300px;
+}
+
+.dotf>p {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: -320px;
+    margin-top: 0px;
+    width: 300px;
+}
+
+.dot {
+    height: 30px;
+    width: 30px;
+    background-color: black;
+    border-radius: 20px;
+    margin-left: 333px;
+    margin-bottom: 100px;
+}
+
+.dotf {
+    height: 30px;
+    width: 30px;
+    background-color: black;
+    border-radius: 20px;
+    margin-left: 333px;
+    margin-bottom: 100px;
+}
+
+#line1 {
+    height: 3750px;
+    width: 5px;
+    border: none;
+    background-color: black;
+    margin: auto;
+    margin-bottom: 100px;
+    margin-top: -3870px;
+}
+
+#line2 {
+    height: 2900px;
+    width: 5px;
+    border: none;
+    background-color: black;
+    margin: auto;
+    margin-bottom: 100px;
+}
+
+#line3 {
+    height: 2900px;
+    width: 5px;
+    border: none;
+    background-color: black;
+    margin: auto;
+    margin-bottom: 100px;
+}
+
+#line4 {
+    height: 2900px;
+    width: 5px;
+    border: none;
+    background-color: black;
+    margin: auto;
+    margin-bottom: 100px;
+}
+
+#line5 {
+    height: 2900px;
+    width: 5px;
+    border: none;
+    background-color: black;
+    margin: auto;
+    margin-bottom: 100px;
+}
