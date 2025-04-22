@@ -1,4 +1,4 @@
-# https://8apirs.github.io
+# https://8pairs.github.io
 
 Random websites
 
